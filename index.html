@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather in App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__container">
+        <form class="header__form">
+          <input type="text" class="header__form__input" name="city" placeholder="Start typing to search..." autocomplete="off"/>
+          <input type="submit" value="" class="header__form__submit" />
+        </form>
+
+        <div class="d-none sitiesListContainer">
+        </div>
+
+        <div class="d-none error"></div>
+
+        <div class="d-none header__output">
+          <div class="header__output__container">
+            <div class="header__output__container__top">
+              <div class="header__output__container__top__left">
+                <div class="header__output__container__top__left__img">
+                  <img src="img/cloud.svg" alt="" />
+                </div>
+                <div class="header__output__container__top__left__text">
+                  <h2>+23</h2>
+                  <span>we</span>
+                  <p>3333</p>
+                </div>
+              </div>
+              <div class="header__output__container__top__right">
+                <h2>Name city</h2>
+                <p>Date</p>
+              </div>
+            </div>
+
+            <div class="header__output__container__bottom">
+              <div class="header__output__container__bottom__left">
+                <p>Min</p>
+                <h2>Feels Like</h2>
+              </div>
+              <div class="header__output__container__bottom__right">
+                <p>Max</p>
+                <h2>Humidity</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <div class="main__title">
+      <h1>Check the weather in most popular cities in the world</h1>
+    </div>
+    <div class="main__card">
+      <div class="main__card__item__new-York">
+        <button type="submit">New York</button>
+      </div>
+      <div class="main__card__item__london">
+        <button type="submit">London</button>
+      </div>
+      <div class="main__card__item__dubai">
+        <button type="submit">Dubai</button>
+      </div>
+      <div class="main__card__item__paris">
+        <button type="submit">Paris</button>
+      </div>
+    </div>
+    <div class="main__title">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="main__accordion-block">
+      <button class="main__accordion-block__item">Question 1</button>
+        <div class="panel">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+        </div>
+
+        <button class="main__accordion-block__item">Question 2</button>
+        <div class="panel">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+        </div>
+
+        <button class="main__accordion-block__item">Question 3</button>
+        <div class="panel">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+        </div>
+
+        <button class="main__accordion-block__item">Question 4</button>
+        <div class="panel">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h5>Alex Nesmiyanov</h5>
+    <span>2021</span>
+  </div>
+
+  <!--
+      <div class="back-card">
+        <div class="card-top">
+          <div class="city-name">
+            <p></p>
+          </div>
+          <img src="img/night_image.svg" alt="" class="card-img-top" />
+        </div>
+-->
+
+    <script src="request.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
