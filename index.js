@@ -7,6 +7,7 @@ const sitiesListContainer = document.querySelector('.sitiesListContainer');
 const errorListContainer = document.querySelector('.error');
 //const timeImage = document.querySelector('.card-top img');
 const cardInfo = document.querySelector('.header__output');
+const dayNightIcon = document.querySelector('.header__container');
 
 const spitOutCelcius = (kelvin) => {
     celcius = Math.round(kelvin - 273.15);
@@ -16,6 +17,18 @@ const isDayTime = (icon) => {
     if (icon.includes('d')) { return true }
     else { return false }
 }
+
+const dayNightSwitch = () => {
+  const hours = new Date().getHours()
+  const isDayTime = hours > 6 && hours < 20
+  if (isDayTime) {
+    dayNightIcon.style.backgroundImage = "url('img/day-bg.png')";
+  }else{
+    dayNightIcon.style.backgroundImage = "url('img/night-bg.png')";
+  }
+}
+
+
 updateWeatherApp = (city) => {
     console.log(city);
     const imageName = city.weather[0].icon;
@@ -52,31 +65,8 @@ updateWeatherApp = (city) => {
         </div>
       </div>
   </div>
-
-
-    
     `;
-    /*
-    if (isDayTime(imageName)) {
-        console.log('day');
-        timeImage.setAttribute('src', 'img/day_image.svg');
-        if (cityName.classList.contains('text-white')) {
-            cityName.classList.remove('text-white');
-        } else {
-            cityName.classList.add('text-black');
-        }
-
-    } else {
-        console.log('night');
-        timeImage.setAttribute('src', 'img/night_image.svg');
-        if (cityName.classList.contains('text-black')) {
-            cityName.classList.remove('text-black');
-        } else {
-            cityName.classList.add('text-white');
-        }
-
-    }
-*/
+  
     cardInfo.classList.remove('d-none');
 }
 const myFunction = (city) => {
@@ -145,3 +135,5 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+dayNightSwitch()

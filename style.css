@@ -38,7 +38,8 @@ input {
   height: 426px;
 }
 .header__container {
-  background: url('img/day-bg.png') no-repeat center center;
+  background-repeat: no-repeat;
+  background-position:  center center;
   background-size: cover;
   height: 100%;
   display: flex;
