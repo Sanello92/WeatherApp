@@ -351,24 +351,3 @@ input {
 .d-none {
   display: none;
 }
-/*
-.high::before {
-  content: '';
-  background: url('img/up.svg') no-repeat;
-  width: 10px;
-  height: 15px;
-  display: inline-block;
-  position: relative;
-  top: 3px;
-}
-
-.low::before {
-  content: '';
-  background: url('img/down.svg') no-repeat;
-  width: 10px;
-  height: 15px;
-  display: inline-block;
-  position: relative;
-  top: 3px;
-}
- */
