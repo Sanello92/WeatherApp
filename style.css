@@ -200,8 +200,8 @@ input {
   text-align: left;
   cursor: pointer;
 }
-.citiesContainer__list__item:hover {
-  background: #90CAF9;
+.citiesContainer__list button:hover {
+  background-color: #90CAF9;
 }
 
 .main {

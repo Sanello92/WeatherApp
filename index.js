@@ -7,16 +7,13 @@ const errorListContainer = document.querySelector('.error');
 const cardInfo = document.querySelector('.header__output');
 const dayNightBg = document.querySelector('.header__container');
 const dayNightSearchButton = document.querySelector('.header__form__submit');
-//const dayNightListButton = document.querySelector('.citiesContainer__list__item:hover');
-const footerYear = document.querySelector('.footer__year')
+const footerYear = document.querySelector('.footer__year');
 const today = new Date();
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
-console.log("new-york", newYork.value)
 
 const myF = (city) => {
-  console.log("myF", city)
   requestCity(city)
         .then((data) => {
             updateWeatherApp(data);
@@ -52,7 +49,6 @@ const dayNightSwitch = () => {
     dayNightBg.style.backgroundImage = "url('img/night-bg.png')";
     dayNightSearchButton.style.backgroundImage = "url('img/search.png')";
     dayNightSearchButton.style.backgroundColor = "#2A344B";
-    //dayNightListButton.style.backgroundColor = "red";
   }
 }
 
@@ -98,7 +94,6 @@ const updateWeatherApp = (city) => {
       </div>
   </div>
     `;
-  
     cardInfo.classList.remove('d-none');
 }
 
@@ -117,7 +112,7 @@ const listCities = (data) => {
   const cities = data.list.map((el) => el.name )
   citiesListContainer.innerHTML = `
   <ul class="citiesContainer__list">
-  ${cities.map(el => `<button class="citiesContainer__list__item" id="${el}" onclick="myFunction(this.id)">${el}</button>`).join("")}
+  ${cities.map(el => `<li class="citiesContainer__list__item"><button id="${el}" onclick="myFunction(this.id)">${el}</button></li>`).join("")}
   </ul>
   `
   errorListContainer.innerHTML = `

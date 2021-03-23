@@ -196,9 +196,9 @@ input {
       width: 560px;
       text-align: left;
       cursor: pointer;
-    }
-    &__item:hover {
-      background: #90CAF9;
+      &:hover {
+        background-color: #90CAF9;
+      }
     }
   }
 }
