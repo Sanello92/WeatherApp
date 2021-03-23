@@ -240,19 +240,19 @@ input {
         left: 10px;
       }
       &__new-York {
-        background: url(/img/new-york.png) no-repeat;
+        background: url('/img/new-york.png') no-repeat;
       }
       &__london {
         margin-left: 30px;
-        background: url(/img/london.png) no-repeat;
+        background: url('/img/london.png') no-repeat;
       }
       &__dubai {
         margin-left: 30px;
-        background: url(/img/dubai.png) no-repeat;
+        background: url('/img/dubai.png') no-repeat;
       }
       &__paris {
         margin-left: 30px;
-        background: url(/img/paris.png) no-repeat;
+        background: url('/img/paris.png') no-repeat;
       }
     }
   }
@@ -272,7 +272,7 @@ input {
       outline: none;
       transition: 0.4s;
       &:after {
-        content: url(/img/down.png);
+        content: url('/img/down.png');
         font-weight: bold;
         float: right;
         margin-left: 5px;

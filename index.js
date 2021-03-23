@@ -126,7 +126,6 @@ listCities = (data) => {
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
     const citySearched = cityValue.value.trim();
-    console.log(citySearched);
     searchForm.reset();
 
     requestCities(citySearched)
