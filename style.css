@@ -1,30 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
-
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: "roboto";
+  src: url("fonts/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: roboto;
   font-weight: normal;
 }
 
-button {
-  cursor: pointer;
-}
- 
-input {
-  -webkit-appearance: none;
-}
- 
 button,
 input {
   border: none;
@@ -39,7 +26,7 @@ input {
 }
 .header__container {
   background-repeat: no-repeat;
-  background-position:  center center;
+  background-position: center center;
   background-size: cover;
   height: 100%;
   display: flex;
@@ -51,7 +38,7 @@ input {
   margin-top: 30px;
   position: relative;
 }
-.header__form .header__form__input {
+.header__form__input {
   font-size: 16px;
   width: 600px;
   height: 60px;
@@ -61,7 +48,7 @@ input {
   color: black;
   outline: none;
 }
-.header__form .header__form__input::placeholder {
+.header__form__input::placeholder {
   color: #9E9E9E;
   font-size: 16px;
   font-style: normal;
@@ -70,47 +57,31 @@ input {
   letter-spacing: 0em;
   text-align: left;
 }
-.header__form .header__form__input:focus::placeholder {
-  color: transparent
-}
-.header__form .header__form__input:focus {
+.header__form__input:focus {
   color: #333;
 }
-.header__form .header__form__submit {
+.header__form__input:focus::placeholder {
+  color: transparent;
+}
+.header__form__submit {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 40px;
   height: 40px;
   cursor: pointer;
-  background-color: #90CAF9;
-  background-image: url('img/search.png');
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 30px;
 }
-.header__form .header__form__submit:hover {
+.header__form__submit:hover {
   opacity: 0.8;
-}
-.header__form__input[type="search"] {
-  -webkit-appearance: none;
-}
-
-.error {
-  display: block;
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 30px;
-  width: 600px;
-  color: #9E9E9E;
-  margin-top: 100px;
-  text-align: center;
-  padding: 20px;
 }
 .header__output {
   position: absolute;
   margin-top: 140px;
-  width: 600px;height: 236px;
+  width: 600px;
+  height: 236px;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 30px;
   z-index: 0;
@@ -153,6 +124,15 @@ input {
   flex-direction: column;
   text-align: right;
 }
+.header__output__container__top__right__span {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.header__output__container__top__right__span span {
+  margin-left: 5px;
+  color: #9E9E9E;
+}
 .header__output__container__top__right p {
   margin-top: 10px;
   color: #9E9E9E;
@@ -184,7 +164,20 @@ input {
 .header__output__container__bottom__right h2 {
   margin-top: 5px;
 }
-.sitiesListContainer {
+
+.error {
+  display: block;
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 30px;
+  width: 600px;
+  color: #9E9E9E;
+  margin-top: 100px;
+  text-align: center;
+  padding: 20px;
+}
+
+.citiesContainer {
   width: 600px;
   height: auto;
   background: #FFFFFF;
@@ -195,20 +188,22 @@ input {
   top: 100px;
   padding: 20px;
 }
-.sities-list {
+.citiesContainer__list {
   list-style-type: none;
 }
-.sities-list button {
+.citiesContainer__list button {
   border: none;
   padding: 7px 10px;
   font-size: 16px;
   border-radius: 30px;
   width: 560px;
   text-align: left;
+  cursor: pointer;
 }
-.sities-item:hover {
+.citiesContainer__list__item:hover {
   background: #90CAF9;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -216,6 +211,7 @@ input {
 }
 .main__title {
   margin-top: 70px;
+  width: 40%;
 }
 .main__title h1 {
   text-align: center;
@@ -231,76 +227,40 @@ input {
   flex-direction: row;
   justify-content: space-between;
 }
-.main__card__item__new-York {
+.main__card__item {
   position: relative;
   width: 220px;
   height: 220px;
-  background: url(/img/new-york.png);
   background-size: cover;
+}
+.main__card__item button {
+  width: 200px;
+  height: 36px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  bottom: 14px;
+  left: 10px;
+}
+.main__card__item__new-York {
+  background: url(/img/new-york.png) no-repeat;
 }
 .main__card__item__london {
-  position: relative;
   margin-left: 30px;
-  width: 220px;
-  height: 220px;
-  background: url(/img/london.png);
-  background-size: cover;
+  background: url(/img/london.png) no-repeat;
 }
 .main__card__item__dubai {
-  position: relative;
   margin-left: 30px;
-  width: 220px;
-  height: 220px;
-  background: url(/img/dubai.png);
-  background-size: cover;
+  background: url(/img/dubai.png) no-repeat;
 }
 .main__card__item__paris {
-  position: relative;
   margin-left: 30px;
-  width: 220px;
-  height: 220px;
-  background: url(/img/paris.png);
-  background-size: cover;
-}
-.main__card__item__new-York button {
-  width: 200px;
-  height: 36px;
-  position: absolute;
-  bottom: 14px;
-  left: 10px;
-  background-color: #fff;
-  border-radius: 30px;
-}
-.main__card__item__london button {
-  width: 200px;
-  height: 36px;
-  position: absolute;
-  bottom: 14px;
-  left: 10px;
-  background-color: #fff;
-  border-radius: 30px;
-}
-.main__card__item__dubai button {
-  width: 200px;
-  height: 36px;
-  position: absolute;
-  bottom: 14px;
-  left: 10px;
-  background-color: #fff;
-  border-radius: 30px;
-}
-.main__card__item__paris button {
-  width: 200px;
-  height: 36px;
-  position: absolute;
-  bottom: 14px;
-  left: 10px;
-  background-color: #fff;
-  border-radius: 30px;
+  background: url(/img/paris.png) no-repeat;
 }
 .main__accordion-block {
   width: 1000px;
-  height: autщ;
+  height: auto;
 }
 .main__accordion-block__item {
   margin-top: 20px;
@@ -315,19 +275,13 @@ input {
   outline: none;
   transition: 0.4s;
 }
-
 .main__accordion-block__item:after {
   content: url(/img/down.png);
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
-
-.active:after {
-  content: url(/img/up.png);
-}
-
-.panel {
+.main__accordion-block__panel {
   margin-top: 5px;
   padding: 0 20px;
   background: #FAFAFA;
@@ -336,8 +290,12 @@ input {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.panel p {
+.main__accordion-block__panel p {
   margin-top: 15px;
+}
+
+.active:after {
+  content: url(/img/up.png);
 }
 
 .footer {
@@ -349,6 +307,54 @@ input {
   align-items: center;
   justify-content: center;
 }
+.footer span {
+  font-size: 16px;
+  margin-left: 3px;
+}
+
 .d-none {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__form {
+    width: 100%;
+  }
+  .header__form__input {
+    width: 100%;
+  }
+  .header__output {
+    width: 100%;
+  }
+  .header__output__container__top {
+    width: 100%;
+  }
+
+  .citiesContainer {
+    width: 100%;
+  }
+
+  .error {
+    width: 100%;
+  }
+
+  .main__title {
+    width: 70%;
+  }
+  .main__card {
+    width: 100%;
+    margin: 2%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main__card__item {
+    margin: 1%;
+  }
+  .main__card__item button {
+    width: 80%;
+    left: 22px;
+  }
+  .main__accordion-block {
+    width: 100%;
+  }
 }
