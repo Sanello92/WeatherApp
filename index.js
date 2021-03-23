@@ -7,12 +7,22 @@ const errorListContainer = document.querySelector('.error');
 const cardInfo = document.querySelector('.header__output');
 const dayNightBg = document.querySelector('.header__container');
 const dayNightSearchButton = document.querySelector('.header__form__submit');
-// const dayNightListButton = document.querySelector('.citiesContainer__list__item:hover');
+//const dayNightListButton = document.querySelector('.citiesContainer__list__item:hover');
 const footerYear = document.querySelector('.footer__year')
 const today = new Date();
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+console.log("new-york", newYork.value)
+
+const myF = (city) => {
+  console.log("myF", city)
+  requestCity(city)
+        .then((data) => {
+            updateWeatherApp(data);
+        })
+        .catch((error) => { console.log(error) })
+}
 
 //transform kelvin to celcium
 const spitOutCelcius = (kelvin) => {
@@ -25,7 +35,7 @@ const isDayTime = (icon) => {
 }
 
 //add date Now
-yearFooter = () => {
+const yearFooter = () => {
   footerYear.innerHTML = `${today.getFullYear()}`
 }
 
@@ -33,22 +43,22 @@ yearFooter = () => {
 const dayNightSwitch = () => {
   const hours = new Date().getHours()
   const isDayTime = hours > 7 && hours < 19
+
   if (isDayTime) {
     dayNightBg.style.backgroundImage = "url('img/day-bg.png')";
     dayNightSearchButton.style.backgroundImage = "url('img/search.png')";
     dayNightSearchButton.style.backgroundColor = "#90CAF9";
-    // dayNightListButton.style.backgroundColor = "#90CAF9";
   }else{
     dayNightBg.style.backgroundImage = "url('img/night-bg.png')";
     dayNightSearchButton.style.backgroundImage = "url('img/search.png')";
     dayNightSearchButton.style.backgroundColor = "#2A344B";
-    // dayNightListButton.style.backgroundColor = "#2A344B";
+    //dayNightListButton.style.backgroundColor = "red";
   }
 }
 
 //Add the city weather details to output
-updateWeatherApp = (city) => {
-    console.log(city);
+const updateWeatherApp = (city) => {
+    console.log("updateWeather", city);
     const imageName = city.weather[0].icon;
     const iconSrc = `http://openweathermap.org/img/wn/${imageName}@2x.png`
     cityName.textContent = city.name;
@@ -93,7 +103,7 @@ updateWeatherApp = (city) => {
 }
 
 const myFunction = (city) => {
-  console.log(city);
+  console.log("my Fanction", city);
     requestCity(city)
         .then((data) => {
             updateWeatherApp(data);
@@ -103,7 +113,7 @@ const myFunction = (city) => {
 }
 
 //Get the list of cities
-listCities = (data) => {
+const listCities = (data) => {
   const cities = data.list.map((el) => el.name )
   citiesListContainer.innerHTML = `
   <ul class="citiesContainer__list">
