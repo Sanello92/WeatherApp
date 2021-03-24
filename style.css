@@ -244,19 +244,19 @@ input {
   left: 10px;
 }
 .main__card__item__new-York {
-  background: url("/img/new-york.png") no-repeat;
+  background: url("img/new-york.png") no-repeat;
 }
 .main__card__item__london {
   margin-left: 30px;
-  background: url("/img/london.png") no-repeat;
+  background: url("img/london.png") no-repeat;
 }
 .main__card__item__dubai {
   margin-left: 30px;
-  background: url("/img/dubai.png") no-repeat;
+  background: url("img/dubai.png") no-repeat;
 }
 .main__card__item__paris {
   margin-left: 30px;
-  background: url("/img/paris.png") no-repeat;
+  background: url("img/paris.png") no-repeat;
 }
 .main__accordion-block {
   width: 1000px;
@@ -276,7 +276,7 @@ input {
   transition: 0.4s;
 }
 .main__accordion-block__item:after {
-  content: url("/img/down.png");
+  content: url("img/down.png");
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -295,7 +295,7 @@ input {
 }
 
 .active:after {
-  content: url(/img/up.png);
+  content: url("img/up.png");
 }
 
 .footer {
