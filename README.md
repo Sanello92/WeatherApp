@@ -1,3 +1,4 @@
+![ScreenShot](img/screen.png)
 # WeatherApp
 ## Contents
 * [About] (#about)
@@ -15,7 +16,8 @@ This project was created with:
 * JavaScript
 * OpenWeather APIs
 
-## Key features With WeatherApp, users can:
+## Key features
+With WeatherApp, users can:
 * Search for the minimum/maximum temperature across different locations * Check the current weather across the 4 most popular cities in the world (New York, London, Dubai, and Paris)
 * Check out FAQs * Enjoy day/night modes
 ## Setup
