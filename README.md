@@ -7,7 +7,8 @@
 * [Setup] (#setup)
 ## About
 ```
-A weather app using OpenWeather APIs to provide current and forecasted weather data. WeatherApp tells users what weather they should expect for different locations.
+A weather app using OpenWeather APIs to provide current and forecasted weather data. 
+WeatherApp tells users what weather they should expect for different locations.
 ```
 ## Technologies
 This project was created with:
